@@ -10,7 +10,7 @@ This app uses the Twilio programmable voice API.
 
 ## Setup
 
-```
+```bash
 git clone git://github.com/brendan-myers/phone-captcha.git
 cd phone-captcha
 npm install
@@ -35,13 +35,13 @@ By default, the caller whitelist is stored in memory. If you would like whitelis
 
 The application expects an environment variable containing the number to forward successful calls to.
 
-```
-OUTBOUND_NUMBER=xxxxxxxxxxxx
+```bash 
+export OUTBOUND_NUMBER=xxxxxxxxxxxx
 ```
 
 (Optional) If using Google Cloud Datastore, you will need to set the `WHITELIST_LOCATION=GOOGLE_CLOUD` environment variable, and provide the project ID and the key json file.
 
-```
+```bash
 export WHITELIST_LOCATION=GOOGLE_CLOUD
 export GOOGLE_CLOUD_PROJECT=xxxxxxxxxxxx
 export GOOGLE_CLOUD_KEY=xxxxxxxxxxxx.json
@@ -50,11 +50,11 @@ export GOOGLE_CLOUD_KEY=xxxxxxxxxxxx.json
 
 ## Run
 
-```
+```bash
 node .
 ```
 or
-```
+```bash
 OUTBOUND_NUMBER=xxxxxxxxxxxx WHITELIST_LOCATION=GOOGLE_CLOUD GOOGLE_CLOUD_PROJECT=xxxxxxxxxxxx GOOGLE_CLOUD_KEY=xxxxxxxxxxxx.json node .
 ```
 
