@@ -45,12 +45,12 @@ app.post('/voice', (req, res) => {
 
 	twiml.say(SAY_OPTIONS, `${SAY_GREETING} ${code.text}`);
 
-    twiml.gather({
-        timeout: 5,
-        numDigits: CODE_LENGTH,
-        action: `/validate/${code.url}`,
-    	method: 'POST'
-    });
+	twiml.gather({
+		timeout: 5,
+		numDigits: CODE_LENGTH,
+		action: `/validate/${code.url}`,
+		method: 'POST'
+	});
 
     res.send(twiml.toString());
 });
