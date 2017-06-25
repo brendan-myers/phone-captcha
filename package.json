@@ -9,6 +9,7 @@
   "author": "Brendan Myers <brendan@skygrid.io>",
   "license": "MIT",
   "dependencies": {
+    "@google-cloud/datastore": "^1.0.2",
     "body-parser": "^1.17.2",
     "express": "^4.15.3",
     "twilio": "^3.4.0"
