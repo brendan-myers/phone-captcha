@@ -3,6 +3,8 @@ Super simple application for filtering robocalls with an audio based captcha.
 
 [![Build][travis-image]][travis-url]
 
+A random 4-digit code is played to the caller, which then must be entered in on their keypad for the call to connect. This app uses the Twilio programmable voice API.
+
 
 ## Setup
 
@@ -13,6 +15,8 @@ npm install
 ```
 
 ### Twilio
+
+A Twilio account and number capable of making calls are required.
 
 From the Twilio console, configure the hook for incoming calls to point to the /voice endpoint of this application.
 
